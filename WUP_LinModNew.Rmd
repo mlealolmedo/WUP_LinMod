@@ -42,7 +42,9 @@ plot(SIMS~ARM,data=data)
 Based on the scatter plot above, If you were to draw a straight line on the points. You will see that most of them are increasing and that the points are moved towards the right. So I think its a positive correlation.
 
 ### Numerical results
-
+```{r}
+cor(SIMS~ARM,data=data)
+```
 
 ### Inferential  (Build model.1)
 
