@@ -56,7 +56,12 @@ The information above shows us that the residual standard error is 1.226. And th
 
 
 #### Predict at target point
+SIMS=0.054563*ARM-4.095160
+```{r}
+0.054563*88-4.095160
+```
 
+When 88 was plugged in for ARM we got 0.706384, this is the prediction for the value.
 
 #### scatterplot with model fit
   
