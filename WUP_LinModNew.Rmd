@@ -108,6 +108,7 @@ model.2<- lm(SIMS~GRIP,data=data)
 summary.lm(model.2)
 ```
   
+The information above shows us that adjusted r squared is 0.4053 and the residual standard error is 1.295, so the residual is larger for this grip data then the arm data. Both of these values indicate that model 1 is a better model. 
   
 
 #### predict model.2 at target point
