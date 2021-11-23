@@ -47,6 +47,13 @@ cor(SIMS~ARM,data=data)
 ```
 
 ### Inferential  (Build model.1)
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+The information above shows us that the residual standard error is 1.226. And that the adjusted r squared is 0.467. It also shows us that the fit equation is SIMS=0.054563*ARM-4.095160.
+
 
 #### Predict at target point
 
