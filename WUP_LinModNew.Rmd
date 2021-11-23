@@ -137,13 +137,47 @@ cor(SIMS~ARM+GRIP,data=data)
   
 ### Inferential  (Build 2-dimentional model.3)
 
+```{r}
+model.3 <-lm(SIMS~GRIP + ARM,data=data)
+summary.lm(model.3)
+```
+
+SIMS= -5.43 + GRIP * 0.02 + ARM * 0.04
+
 #### predict model.3 at target point
-  
+
+Our residential standard error is 1.144 which is smaller than our other models, and our multiple R squared is bigger, which makes this a better fit model. 
+
+
+```{r}
+predict(model.3, new, interval = "prediction")
+```
+
 
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+
+```{r}
+anova(model.1,model.3)
+```
+
+The model with GRIP and ARM is better than model SIMS and ARMS. We can see that from the anova function.
+
 ### Model.2 vs Model.3
+```{r}
+anova(model.2,model.3)
+```
+
+
+model 3 is a better model than model 2 as evidence by having less errors in model 3 than the other models. The values of RSS was 243.07 vs 188.43.
+
 
 ## Informally compare Model.1 with model.2
+
+```{r}
+anova(model.1,model.2)
+```
+
+Model 1 has a smaller RSS of 217.88. We can say that model 1 is the better model due to the less amount if errors ~ ARM can be named the better model.
 
