@@ -119,7 +119,12 @@ predict(model.2,new,interval = "prediction")
 
 #### now add the model fit to our plot for model.2
   
+```{r}
+basicNN <- ggplot(data, aes(y=SIMS, x=GRIP))
+basicNN + geom_point() + geom_smooth(method=lm)
+```
 
+Above is the results of the scatter plot and the best fit line for our SIMS and GRIP data.
 
 ## Model 3 SIM~ARM+GRIP
 
