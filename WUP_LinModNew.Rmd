@@ -68,7 +68,7 @@ new<-data.frame(ARM = 88,GRIP = 94)
 ```
 
 ```{r}
-predict(model.1,new)
+predict(model.1,new, interval = "prediction")
 ```
 
 
@@ -112,6 +112,10 @@ The information above shows us that adjusted r squared is 0.4053 and the residua
   
 
 #### predict model.2 at target point
+```{r}
+predict(model.2,new,interval = "prediction")
+```
+
 
 #### now add the model fit to our plot for model.2
   
@@ -121,7 +125,10 @@ The information above shows us that adjusted r squared is 0.4053 and the residua
 
 ### Numerical results (cor)
 
-`
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
+
   
 ### Inferential  (Build 2-dimentional model.3)
 
